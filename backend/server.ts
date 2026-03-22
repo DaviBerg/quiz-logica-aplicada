@@ -1,11 +1,16 @@
 import { readFileSync } from "fs";
 import pl from "tau-prolog";
 
+// program é uma string
 const program = readFileSync("./backend/data/animals.pl", "utf8");
 
 function createSession(): Promise<any> {
+  // O papel da promisse é informar para o programa se pôde ser consultado sem problemas
   return new Promise((resolve, reject) => {
+
+    // Cria um interpretador Prolog que pode executar no máximo 1000 passos
     const s = pl.create(1000);
+
     s.consult(program, {
       success: () => resolve(s),
       error: (err: any) => reject("Erro ao consultar Prolog: " + err.toString()),
@@ -16,14 +21,21 @@ function createSession(): Promise<any> {
 function getAllAnimals(s: any): Promise<string[]> {
   return new Promise((resolve, reject) => {
     const animals: string[] = [];
+
+    // s.query(...) verifica se a estrutura da consulta está correta
+    // Caso sim, executa success, caso não, executa error
     s.query("animal(Nome, _, _, _, _, _, _, _, _, _).", {
       success: () => {
-        const collect = (answer: any) => {
+
+        // Buscar fatos e adicioná-los em um array
+        const collect = (answer: any) => { // answer é um objeto do Prolog que pode ser acessado apenas dentro do success
           if (answer === false) return resolve(animals);
           if (pl.type.is_error(answer)) return reject("Erro Prolog: " + answer.args[0].toString());
           animals.push(answer.lookup("Nome").id);
           s.answer(collect);
         };
+
+        // Recursividade
         s.answer(collect);
       },
       error: (err: any) => reject("Erro ao criar query getAllAnimals: " + err.toString()),
@@ -94,11 +106,13 @@ const server = Bun.serve({
         if (allAnimals.length === 0)
           return new Response(JSON.stringify({ error: "Base Prolog vazia" }), { status: 500, headers });
 
+        // Escolhe um animal para ser a resposta certa do quiz
         const correct = allAnimals[Math.floor(Math.random() * allAnimals.length)];
 
         const s2 = await createSession();
         const data = await getAnimalData(s2, correct);
 
+        // Seleciona 3 alternativas que não são a correta
         const distractors = allAnimals
           .filter((a) => a !== correct)
           .sort(() => 0.5 - Math.random())
