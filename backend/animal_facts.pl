@@ -27,17 +27,28 @@
 %match(X, X).
 
 
-animal('Grey Wolf', 'Animalia', 'Chordata', 'Mammalia', 'Carnivora', 'Canidae', 'Canis', 'Canis lupus', '10-20 years', 'Nocturnal, Carnivore, Scavenger, Terrestrial, Cursorial', 'Carnivore, Scavenger').
-animal('Tiger', 'Animalia', 'Chordata', 'Mammalia', 'Carnivora', 'Felidae', 'Panthera', 'Panthera tigris', '10-15 years', 'Nocturnal, Carnivore, Cursorial, Terrestrial, Ambush predator', 'Carnivore').
-animal('Brown Bear', 'Animalia', 'Chordata', 'Mammalia', 'Carnivora', 'Ursidae', 'Ursus', 'Ursus arctos', '20-50 years', 'Crepuscular, Omnivore, Terrestrial, Altricial, Nomadic', 'Omnivore').
-animal('Blue Whale', 'Animalia', 'Chordata', 'Mammalia', 'Artiodactyla', 'Balaenopteridae', 'Balaenoptera', 'Balaenoptera musculus', '80-90 years', 'Carnivore, Piscivores, Aquatic, Precocial, Natatorial', 'Carnivore, Piscivores').
-animal('Killer Whale', 'Animalia', 'Chordata', 'Mammalia', 'Artiodactyla', 'Delphinidae', 'Orcinus', 'Orcinus orca', '30-100 years', 'Diurnal, Carnivore, Aquatic, Precocial, Cosmopolitan', 'Carnivore').
-animal('Giant Panda', 'Animalia', 'Chordata', 'Mammalia', 'Carnivora', 'Ursidae', 'Ailuropoda', 'Ailuropoda melanoleuca', '20-30 years', 'Crepuscular, Nocturnal, Herbivore, Folivore, Terrestrial', 'Herbivore, Folivore').
-animal('Lion', 'Animalia', 'Chordata', 'Mammalia', 'Carnivora', 'Felidae', 'Panthera', 'Panthera leo', '12-25 years', 'Nocturnal, Crepuscular, Diurnal, Scavenger, Hypercarnivore', 'Scavenger, Hypercarnivore').
-animal('Koala', 'Animalia', 'Chordata', 'Mammalia', 'Diprotodontia', 'Phascolarctidae', 'Phascolarctos', 'Phascolarctos cinereus', '15 years', 'Nocturnal, Herbivore, Folivore, Arboreal, Altricial', 'Herbivore, Folivore').
-animal('Cougar', 'Animalia', 'Chordata', 'Mammalia', 'Carnivora', 'Felidae', 'Puma', 'Puma concolor', '10-20 years', 'Nocturnal, Carnivore, Terrestrial, Altricial, Ambush predator', 'Carnivore').
-animal('Quokka', 'Animalia', 'Chordata', 'Mammalia', 'Diprotodontia', 'Macropodidae', 'Setonix', 'Setonix brachyurus', '5-10 years', 'Nocturnal, Herbivore, Folivore, Frugivore, Terrestrial', 'Herbivore, Folivore, Frugivore').
-animal('Jaguar', 'Animalia', 'Chordata', 'Mammalia', 'Carnivora', 'Felidae', 'Panthera', 'Panthera onca', '11-20 years', 'Crepuscular, Carnivore, Terrestrial, Altricial, Territorial', 'Carnivore').
+animal('Grey Wolf', 'Animalia', 'Chordata', 'Mammalia', 'Carnivora', 'Canidae', 'Canis', 'Canis lupus',
+ '10-20 years', 'Nocturnal, Carnivore, Scavenger, Terrestrial, Cursorial', 'Carnivore, Scavenger').
+animal('Tiger', 'Animalia', 'Chordata', 'Mammalia', 'Carnivora', 'Felidae', 'Panthera', 'Panthera tigris', 
+'10-15 years', 'Nocturnal, Carnivore, Cursorial, Terrestrial, Ambush predator', 'Carnivore').
+animal('Brown Bear', 'Animalia', 'Chordata', 'Mammalia', 'Carnivora', 'Ursidae', 'Ursus', 'Ursus arctos', 
+'20-50 years', 'Crepuscular, Omnivore, Terrestrial, Altricial, Nomadic', 'Omnivore').
+animal('Blue Whale', 'Animalia', 'Chordata', 'Mammalia', 'Artiodactyla', 'Balaenopteridae', 'Balaenoptera', 'Balaenoptera musculus', 
+'80-90 years', 'Carnivore, Piscivores, Aquatic, Precocial, Natatorial', 'Carnivore, Piscivores').
+animal('Killer Whale', 'Animalia', 'Chordata', 'Mammalia', 'Artiodactyla', 'Delphinidae', 'Orcinus', 'Orcinus orca', 
+'30-100 years', 'Diurnal, Carnivore, Aquatic, Precocial, Cosmopolitan', 'Carnivore').
+animal('Giant Panda', 'Animalia', 'Chordata', 'Mammalia', 'Carnivora', 'Ursidae', 'Ailuropoda', 'Ailuropoda melanoleuca', 
+'20-30 years', 'Crepuscular, Nocturnal, Herbivore, Folivore, Terrestrial', 'Herbivore, Folivore').
+animal('Lion', 'Animalia', 'Chordata', 'Mammalia', 'Carnivora', 'Felidae', 'Panthera', 'Panthera leo', 
+'12-25 years', 'Nocturnal, Crepuscular, Diurnal, Scavenger, Hypercarnivore', 'Scavenger, Hypercarnivore').
+animal('Koala', 'Animalia', 'Chordata', 'Mammalia', 'Diprotodontia', 'Phascolarctidae', 'Phascolarctos', 'Phascolarctos cinereus', 
+'15 years', 'Nocturnal, Herbivore, Folivore, Arboreal, Altricial', 'Herbivore, Folivore').
+animal('Cougar', 'Animalia', 'Chordata', 'Mammalia', 'Carnivora', 'Felidae', 'Puma', 'Puma concolor', 
+'10-20 years', 'Nocturnal, Carnivore, Terrestrial, Altricial, Ambush predator', 'Carnivore').
+animal('Quokka', 'Animalia', 'Chordata', 'Mammalia', 'Diprotodontia', 'Macropodidae', 'Setonix', 'Setonix brachyurus', 
+'5-10 years', 'Nocturnal, Herbivore, Folivore, Frugivore, Terrestrial', 'Herbivore, Folivore, Frugivore').
+animal('Jaguar', 'Animalia', 'Chordata', 'Mammalia', 'Carnivora', 'Felidae', 'Panthera', 'Panthera onca', 
+'11-20 years', 'Crepuscular, Carnivore, Terrestrial, Altricial, Territorial', 'Carnivore').
 animal('Raccoon', 'Animalia', 'Chordata', 'Mammalia', 'Carnivora', 'Procyonidae', 'Procyon', 'Procyon lotor', '2-20 years', 'Nocturnal, Crepuscular, Omnivore, Terrestrial, Altricial', 'Omnivore').
 animal('Polar Bear', 'Animalia', 'Chordata', 'Mammalia', 'Carnivora', 'Ursidae', 'Ursus', 'Ursus maritimus', '25-30 years', 'Diurnal, Carnivore, Scavenger, Terrestrial, Altricial', 'Carnivore, Scavenger').
 animal('Cheetah', 'Animalia', 'Chordata', 'Mammalia', 'Carnivora', 'Felidae', 'Acinonyx', 'Acinonyx jubatus', '10-20 years', 'Diurnal, Carnivore, Terrestrial, Cursorial, Altricial', 'Carnivore').
