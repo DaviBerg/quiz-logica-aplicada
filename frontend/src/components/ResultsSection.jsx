@@ -62,7 +62,7 @@ export default function ResultsSection({ results, count, loading, error, searche
       <div className="flex items-center justify-between mb-6 pb-4 border-b border-border flex-wrap gap-3">
         <p className="font-mono text-xs text-muted">
           <span className="text-accent font-medium text-sm">{count}</span>{' '}
-          animal{count !== 1 ? 'is' : ''} encontrado{count !== 1 ? 's' : ''}
+          animais encontrados
         </p>
 
         <div className="flex items-center gap-2 font-mono text-xs text-muted">

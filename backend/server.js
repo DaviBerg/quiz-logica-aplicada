@@ -109,13 +109,20 @@ app.post("/api/search", async (req, res) => {
     const G = toAtom(genus);
     const S = toAtom(species);
 
-    const goal = `search_animals(${K},${P},${C},${O},${F},${G},${S},Name,Lifespan,Behavior,Diet).`;
+    const goal = `search_animals(${K},${P},${C},${O},${F},${G},${S},Name,AK,AP,AC,AO,AF,AG,AS,Lifespan,Behavior,Diet).`;
     console.log("🔍 Query:", goal);
 
     const answers = await runQuery(goal);
 
     let results = answers.map(a => ({
       name:     getString(a, "Name"),
+      kingdom:  getString(a, "AK"),
+      phylum:   getString(a, "AP"),
+      class:    getString(a, "AC"),
+      order:    getString(a, "AO"),
+      family:   getString(a, "AF"),
+      genus:    getString(a, "AG"),
+      species:  getString(a, "AS"),
       lifespan: getString(a, "Lifespan"),
       behavior: getString(a, "Behavior"),
       diet:     getString(a, "Diet"),

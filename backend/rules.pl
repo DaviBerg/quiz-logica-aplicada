@@ -1,4 +1,4 @@
-search_animals(K, P, C, O, F, G, S, Name, Lifespan, Behavior, Diet) :-
+search_animals(K, P, C, O, F, G, S, Name, AK, AP, AC, AO, AF, AG, AS, Lifespan, Behavior, Diet) :-
   animal(Name, AK, AP, AC, AO, AF, AG, AS, Lifespan, Behavior, Diet),
   match(K, AK),
   match(P, AP),
